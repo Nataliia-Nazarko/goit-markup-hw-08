@@ -1,0 +1,140 @@
+/* Footer */
+.footer {
+  background-color: $background-black-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__logo,
+.footer__address {
+  color: $primary-white-color;
+}
+
+.footer__link {
+  @include linkstyle();
+  color: rgba(255, 255, 255, 0.6);
+
+  font-weight: $font-normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.footer__kontakt {
+  width: 231px;
+  font-style: $style-normal;
+  margin-top: 20px;
+}
+
+.footer__email {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.footer .container {
+  display: flex;
+}
+
+/* Footer links*/
+.footer-links {
+  width: 260px;
+  margin-left: 70px;
+  padding-top: 12px;
+
+  font-weight: $font-bold;
+  line-height: 1.14;
+  text-transform: $text-big;
+
+  color: $primary-white-color;
+}
+
+.footer-links .icon {
+  fill: $primary-white-color;
+}
+
+.footer-link {
+  margin-bottom: 20px;
+}
+
+.social-links {
+  width: 206px;
+}
+
+.footer-links .box {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 12px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-links .box {
+  background-color: rgba(255, 255, 255, 0.1);
+
+  &:focus,
+  &:hover {
+    background-color: $accent-color;
+    cursor: pointer;
+  }
+}
+
+/*Footer form*/
+.footer-forms {
+  min-width: 570px;
+  height: 86px;
+  padding-top: 12px;
+  margin-left: 93px;
+}
+
+.form-title {
+  font-weight: $font-bold;
+  line-height: 1.14;
+  text-transform: $text-big;
+
+  color: $primary-white-color;
+
+  margin-bottom: 20px;
+}
+
+.footer-form {
+  display: flex;
+}
+
+.footer-button {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  padding: 10px 62px 10px 29px;
+}
+
+.footer-form .icon {
+  position: absolute;
+  bottom: 13px;
+  right: 28px;
+}
+
+.footer-forms .form-field {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: $border-radius;
+  background-color: $background-black-color;
+  padding-left: 16px;
+
+  font-family: $main-font;
+  font-style: $style-normal;
+  font-weight: $font-normal;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}

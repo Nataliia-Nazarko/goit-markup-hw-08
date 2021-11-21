@@ -1,0 +1,24 @@
+/* Benefits */
+.benefit-section,
+.portfolio-section {
+  padding-top: 60px;
+}
+
+.benefits-item {
+  width: 270px;
+}
+
+.benefits-item .box {
+  height: 120px;
+  margin-bottom: 30px;
+  background: $background-secondary-color;
+  border-radius: $border-radius;
+  padding: 25px 100px;
+}
+
+.benefit {
+  font-weight: $font-bold;
+  line-height: 16px;
+  text-transform: $text-big;
+  margin-bottom: 10px;
+}
