@@ -12,8 +12,18 @@
 .header__part {
   display: flex;
   align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .header__logo {
@@ -29,6 +39,18 @@
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+}
+
+.header__box {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: inline-block;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: inline-block;
   }
 }
 
@@ -48,4 +70,48 @@
   fill: currentColor;
   margin-right: 10px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Header button */
+.header__button {
+  width: 44px;
+  height: 36px;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 100%;
+  width: 100%;
+  padding: 40px 48px;
+
+  background-color: $primary-white-color;
+
+  animation: animate75 3000ms;
 }
