@@ -4,16 +4,17 @@
 
   @media screen and (min-width: $tablet) {
     display: inline-block;
+    margin-left: 88px;
   }
 
   @media screen and (min-width: $desktop) {
-    display: inline-block;
+    margin-left: 93px;
   }
 }
 
 .nav__list {
   width: 294px;
-  margin-left: 93px;
+  justify-content: space-between;
 }
 
 .nav__link {
@@ -40,7 +41,7 @@
     background: $accent-color;
     border-radius: 2px;
     position: absolute;
-    top: 51px;
+    top: 50px;
     right: 0;
   }
 }

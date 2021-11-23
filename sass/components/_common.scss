@@ -13,21 +13,21 @@ body {
 /*Общиe вспомогательныe контейнеры*/
 
 .container {
-  min-width: 320px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (max-width: $mobile) {
-    width: $mobile;
+  @media screen and (min-width: 320px) {
+    width: 320px;
   }
 
   @media screen and (min-width: $tablet) {
     width: $tablet;
   }
 
-  @media screen and (max-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     width: $desktop;
   }
 }
@@ -39,7 +39,7 @@ body {
 
 .flex {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
 /* Сброс стилей */
