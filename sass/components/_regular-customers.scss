@@ -1,4 +1,7 @@
 /* Regular customers */
+.customers {
+  @include titlestyle();
+}
 
 .customer .box {
   width: 170px;

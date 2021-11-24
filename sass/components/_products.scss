@@ -1,23 +1,29 @@
 /* Produkts */
-.products-studio {
+.products {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: inline-block;
+  }
+}
+
+.products__studio {
   padding-top: 0;
 }
 
-.products,
-.team,
-.customers {
-  font-weight: $font-bold;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  margin-bottom: 50px;
+.products__title {
+  @include titlestyle();
 }
 
-.product .box {
+.products__box {
   position: relative;
 }
 
-.product .name {
+.products__name {
   font-weight: $font-bold;
   font-size: 14px;
   line-height: 16px;
