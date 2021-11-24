@@ -1,6 +1,7 @@
 /* Header */
 
 .header {
+  position: relative;
   width: 100%;
   top: 0;
   left: 0;
@@ -13,7 +14,6 @@
 }
 
 .header__part {
-  position: relative;
   justify-content: flex-start;
   padding-top: 11px;
   padding-bottom: 11px;
@@ -33,7 +33,7 @@
 .header__button {
   position: absolute;
   top: 22px;
-  right: 7px;
+  right: 22px;
   background-color: transparent;
   border: none;
   display: flex;
