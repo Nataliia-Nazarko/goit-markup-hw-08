@@ -3,6 +3,40 @@
   background-color: $background-black-color;
   padding-top: 60px;
   padding-bottom: 60px;
+  height: 613px;
+
+  @media screen and (min-width: $tablet) {
+    height: 463px;
+  }
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    position: relative;
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.footer__box {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 76px;
+    margin-right: 165px;
+  }
 }
 
 .footer__logo,
@@ -26,33 +60,38 @@
 }
 
 .footer__kontakt {
-  width: 231px;
   font-style: $style-normal;
   margin-top: 20px;
+  margin-bottom: 60px;
+  @media screen and (min-width: $tablet) {
+    width: 231px;
+  }
 }
 
 .footer__email {
-  margin-top: 9px;
-  margin-bottom: 9px;
-}
+  margin-top: 8px;
+  margin-bottom: 8px;
 
-.footer .container {
   @media screen and (min-width: $desktop) {
-    display: flex;
+    margin-top: 9px;
+    margin-bottom: 9px;
   }
 }
 
 /* Footer links*/
 .footer-links {
-  width: 260px;
-  margin-left: 70px;
-  padding-top: 12px;
-
+  margin-bottom: 60px;
   font-weight: $font-bold;
   line-height: 1.14;
   text-transform: $text-big;
 
   color: $primary-white-color;
+
+  @media screen and (min-width: $desktop) {
+    width: 260px;
+    margin-left: 70px;
+    padding-top: 12px;
+  }
 }
 
 .footer-links .icon {
@@ -60,11 +99,16 @@
 }
 
 .footer-link {
-  margin-bottom: 20px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 20px;
+  }
 }
 
 .social-links {
   width: 206px;
+  margin-top: 20px;
+  @media screen and (min-width: $desktop) {
+  }
 }
 
 .footer-links .box {
@@ -90,21 +134,27 @@
 .footer-forms {
   min-width: 570px;
   height: 86px;
-  padding-top: 12px;
-  margin-left: 93px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 12px;
+    margin-left: 93px;
+  }
 }
 
 .form-title {
+  margin-bottom: 20px;
   font-weight: $font-bold;
   line-height: 1.14;
   text-transform: $text-big;
 
   color: $primary-white-color;
-
-  margin-bottom: 20px;
+  @media screen and (min-width: $desktop) {
+  }
 }
 
 .footer-form {
+  @media screen and (min-width: $tablet) {
+  }
   @media screen and (min-width: $desktop) {
     display: flex;
   }
@@ -124,9 +174,10 @@
 }
 
 .footer-forms .form-field {
-  width: 358px;
+  width: 450px;
   height: 50px;
-  margin-right: 12px;
+  margin-bottom: 20px;
+
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -141,4 +192,15 @@
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 12px;
+    margin-left: 0;
+    width: 358px;
+  }
 }

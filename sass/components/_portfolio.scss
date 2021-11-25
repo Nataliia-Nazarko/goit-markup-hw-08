@@ -1,19 +1,31 @@
 /* Portfolio */
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 
-.portfolio-section {
+.portfolio-part.section {
+  padding: 0;
+}
+
+.portfolio__section {
   padding-top: 60px;
+  padding-bottom: 30px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
-.portfolio-example {
-  margin-left: 15px;
-  margin-top: 30px;
-  margin-right: 15px;
+.portfolio__example {
+  width: 450px;
+  height: 404px;
+  margin-bottom: 30px;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -23,10 +35,40 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
     cursor: pointer;
   }
+
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    margin-right: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 370px;
+    margin-left: 15px;
+    margin-top: 30px;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
 }
 
-.portfolio-example:nth-child(-n + 3) {
-  margin-top: 0;
+.portfolio__example:nth-child(-n + 3) {
+  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+  }
+}
+
+.portfolio__image {
+  width: 450px;
+  height: 294px;
+
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 370px;
+  }
 }
 
 .example-border {
@@ -52,12 +94,12 @@
   line-height: 1.87;
 }
 
-.portfolio-example .box {
+.portfolio__example .box {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-example .overlay {
+.portfolio__example .overlay {
   position: absolute;
   width: 100%;
   height: 294px;
@@ -73,6 +115,6 @@
   color: $primary-white-color;
 }
 
-.portfolio-example:hover .overlay {
+.portfolio__example:hover .overlay {
   transform: translateY(0);
 }

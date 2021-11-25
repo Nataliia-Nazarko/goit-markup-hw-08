@@ -381,12 +381,7 @@ img {
   top: 0;
   left: 0;
   background-color: #ffffff;
-}
-
-@media screen and (min-width: 768px) {
-  .header {
-    border-bottom: 1px solid #ececec;
-  }
+  border-bottom: 1px solid #ececec;
 }
 
 .header__part {
@@ -1167,6 +1162,67 @@ img {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  height: 613px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 463px;
+  }
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .container {
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin-left: 76px;
+    margin-right: 165px;
+  }
 }
 
 .footer__logo,
@@ -1197,45 +1253,59 @@ img {
 }
 
 .footer__kontakt {
-  width: 231px;
   font-style: normal;
   margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__kontakt {
+    width: 231px;
+  }
 }
 
 .footer__email {
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 @media screen and (min-width: 1200px) {
-  .footer .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .footer__email {
+    margin-top: 9px;
+    margin-bottom: 9px;
   }
 }
 
 /* Footer links*/
 .footer-links {
-  width: 260px;
-  margin-left: 70px;
-  padding-top: 12px;
+  margin-bottom: 60px;
   font-weight: bold;
   line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-links {
+    width: 260px;
+    margin-left: 70px;
+    padding-top: 12px;
+  }
+}
+
 .footer-links .icon {
   fill: #ffffff;
 }
 
-.footer-link {
-  margin-bottom: 20px;
+@media screen and (min-width: 1200px) {
+  .footer-link {
+    margin-bottom: 20px;
+  }
 }
 
 .social-links {
   width: 206px;
+  margin-top: 20px;
 }
 
 .footer-links .box {
@@ -1260,16 +1330,21 @@ img {
 .footer-forms {
   min-width: 570px;
   height: 86px;
-  padding-top: 12px;
-  margin-left: 93px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-forms {
+    padding-top: 12px;
+    margin-left: 93px;
+  }
 }
 
 .form-title {
+  margin-bottom: 20px;
   font-weight: bold;
   line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
-  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1294,9 +1369,9 @@ img {
 }
 
 .footer-forms .form-field {
-  width: 358px;
+  width: 450px;
   height: 50px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1312,6 +1387,21 @@ img {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+  .footer-forms .form-field {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-forms .form-field {
+    margin-right: 12px;
+    margin-left: 0;
+    width: 358px;
+  }
 }
 
 /*Modal window*/

@@ -7,10 +7,7 @@
   left: 0;
 
   background-color: $primary-white-color;
-
-  @media screen and (min-width: $tablet) {
-    border-bottom: 1px solid #ececec;
-  }
+  border-bottom: 1px solid #ececec;
 }
 
 .header__part {
