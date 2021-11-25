@@ -37,7 +37,9 @@
 }
 
 .footer .container {
-  display: flex;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }
 
 /* Footer links*/
@@ -103,7 +105,9 @@
 }
 
 .footer-form {
-  display: flex;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }
 
 .footer-button {
