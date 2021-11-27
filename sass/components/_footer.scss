@@ -8,6 +8,12 @@
   @media screen and (min-width: $tablet) {
     height: 463px;
   }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    height: 252px;
+  }
 }
 
 .footer .container {
@@ -17,12 +23,15 @@
   text-align: center;
 
   @media screen and (min-width: $tablet) {
-    position: relative;
+    width: 768px;
+    flex-wrap: wrap;
+    justify-content: space-around;
     flex-direction: row;
   }
 
   @media screen and (min-width: $desktop) {
     display: flex;
+    flex-wrap: nowrap;
     align-items: flex-start;
     text-align: left;
   }
@@ -34,8 +43,15 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-left: 76px;
+    margin-left: 61px;
     margin-right: 165px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 0;
+    margin-right: 0;
+    align-items: flex-start;
+    text-align: left;
   }
 }
 
@@ -87,10 +103,17 @@
 
   color: $primary-white-color;
 
+  @media screen and (min-width: $tablet) {
+    margin-top: -23px;
+    margin-right: 74px;
+  }
+
   @media screen and (min-width: $desktop) {
     width: 260px;
     margin-left: 70px;
     padding-top: 12px;
+    margin-right: 0;
+    margin-top: 0;
   }
 }
 
@@ -148,15 +171,19 @@
   text-transform: $text-big;
 
   color: $primary-white-color;
-  @media screen and (min-width: $desktop) {
-  }
 }
 
 .footer-form {
   @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   @media screen and (min-width: $desktop) {
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
   }
 }
 
