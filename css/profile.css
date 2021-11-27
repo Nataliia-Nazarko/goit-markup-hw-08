@@ -384,6 +384,12 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
+@media screen and (min-width: 1200px) {
+  .header .container {
+    width: 1200px;
+  }
+}
+
 .header__part {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -420,11 +426,13 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0;
+  fill: #212121;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header__button:hover, .header__button:focus {
+.header__button:hover .header__burger,
+.header__button:focus .header__burger {
   fill: #2196f3;
   cursor: pointer;
 }
@@ -575,6 +583,53 @@ img {
     width: 10px;
     height: 16px;
   }
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 796px;
+  padding: 48px 36px;
+  background-color: #ffffff;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu:hover .overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.mobile-menu__close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu__close:hover, .mobile-menu__close:focus {
+  fill: #2196f3;
+  cursor: pointer;
 }
 
 /* header nav */
@@ -752,6 +807,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .portfolio__section {
+    width: 1200px;
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -863,7 +919,7 @@ img {
   color: #ffffff;
 }
 
-.portfolio__example:hover .overlay {
+.portfolio__example .overlay:hover .overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }

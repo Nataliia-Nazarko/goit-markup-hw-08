@@ -384,6 +384,12 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
+@media screen and (min-width: 1200px) {
+  .header .container {
+    width: 1200px;
+  }
+}
+
 .header__part {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -420,11 +426,13 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0;
+  fill: #212121;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header__button:hover, .header__button:focus {
+.header__button:hover .header__burger,
+.header__button:focus .header__burger {
   fill: #2196f3;
   cursor: pointer;
 }
@@ -575,6 +583,53 @@ img {
     width: 10px;
     height: 16px;
   }
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 796px;
+  padding: 48px 36px;
+  background-color: #ffffff;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu:hover .overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.mobile-menu__close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu__close:hover, .mobile-menu__close:focus {
+  fill: #2196f3;
+  cursor: pointer;
 }
 
 /* header nav */
@@ -752,6 +807,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .benefit__section {
+    width: 1200px;
     padding-bottom: 94px;
   }
 }
@@ -838,7 +894,17 @@ img {
 
 @media screen and (min-width: 1200px) {
   .products {
-    display: inline-block;
+    width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -885,6 +951,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .team .section {
+    width: 1200px;
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -1059,6 +1126,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .customer .section {
+    width: 1200px;
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -1480,12 +1548,13 @@ img {
 }
 
 .modal {
+  width: 450px;
+  height: 609px;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  min-width: 450px;
   border-radius: 4px;
   background-color: #ffffff;
   -webkit-animation: animate75 3000ms;
@@ -1494,7 +1563,8 @@ img {
 
 @media screen and (min-width: 1200px) {
   .modal {
-    min-width: 528px;
+    width: 528px;
+    height: 581px;
   }
 }
 
@@ -1558,7 +1628,7 @@ img {
 .modal-title {
   font-weight: bold;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   text-align: center;
   color: #212121;
@@ -1567,7 +1637,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .modal-title {
-    line-height: 1.5;
+    line-height: 1.15;
   }
 }
 
@@ -1671,14 +1741,26 @@ img {
   overflow: hidden;
   width: 425px;
   height: 24px;
-  margin: 0 auto 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: -23px;
   text-align: center;
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-policy {
+    font-size: 14px;
+    line-height: 1.71;
+    margin: 0 auto 30px;
+  }
 }
 
 .policy-icons {
   position: absolute;
-  left: 0;
-  top: 5px;
+  left: 23px;
+  top: 0px;
   width: 16px;
   height: 15px;
   border: 2px solid #000000;
@@ -1686,6 +1768,13 @@ img {
   cursor: pointer;
   border-radius: 3px;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1200px) {
+  .policy-icons {
+    left: 0px;
+    top: 3px;
+  }
 }
 
 .form-policy input:checked + .policy-icons {
@@ -1698,14 +1787,29 @@ img {
 
 .form-policy .link {
   color: #2196f3;
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-policy .link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-button {
   position: absolute;
   bottom: 0;
-  right: 164px;
+  right: 125px;
   width: 200px;
   height: 50px;
   padding: 10px 55px 10px 56px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-button {
+    right: 164px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

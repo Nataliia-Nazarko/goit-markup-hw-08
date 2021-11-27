@@ -22,11 +22,21 @@
                 <div class="header__part flex">
                     <a href="/" class="logo">Web<span class="header__logo">Studio</span></a>
 
-                    <button class="header__button">
-                        <svg width="24" height="16">
+                    <button class="header__button" .js-open-menu>
+                        <svg class="header__burger" width="24" height="16">
                             <use href="./images/icons.svg#icon-burger">
                         </svg>
                     </button>
+
+                    <div class="mobile-menu" .js-menu-container>
+                        <button class="mobile-menu__close" .js-close-menu>
+                            <svg class="mobile-menu__icon" width="19" height="19">
+                                <use href="./images/icons.svg#icon-vector"></use>
+                            </svg>
+                        </button>
+
+
+                    </div>
                     
                     <nav class="nav">
                         <ul class="nav__list flex">
@@ -180,29 +190,14 @@
                     <h2 class="team__title title">Наша команда</h2>
                     <ul class="team__employees">
                         <li class="team__employee">
-                            <picture class="team__photo">
-                                    <source srcset="
-                                          ./images/products/team-1.webp 1x 320w,, 
-                                          ./images/products/team-1@2x.webp 2x 320w,,
-                                          ./images/products/team-1-tablet.webp 1x 640w, 
-                                          ./images/products/team-1-tablet@2x.webp 2x 640w,
-                                          ./images/products/team-1-desktop.webp 1x 960w, 
-                                          ./images/products/team-1-desktop@2x.webp 2x 960w,
-                                          " type="image/webp"
-                                    />
-
-                                    <img srcset="
-                                          ./images/products/team-1.jpg 1x 320w, 
-                                          ./images/products/team-1@2x.jpg 2x 320w, 
-                                          ./images/products/team-1-tablet.jpg 1x 640w, 
-                                          ./images/products/team-1-tablet@2x.jpg 2x 640w,
-                                          ./images/products/team-1-desktop.jpg 1x 960w, 
-                                          ./images/products/team-1-desktop@2x.jpg 2x 960w,
-                                        " type="image/jpg" 
-                                          src="./images/igor-demyanenko.jpg" alt="Игорь Демьяненко"
-                                          sizes="(min-width: 960px) 25vw, (min-width: 576px) 50vw,  100vw"
-                                    />
-                            </picture>  
+                            <img class="team__photo" 
+                                 srcset="./images/team/team-1.jpg 1x,
+                                        ./images/team/team-1@2x.jpg 2x,
+                                        ./images/team/team-1-tablet.jpg 1x,
+                                        ./images/team/team-1-tablet@2x.jpg 2x,
+                                        ./images/team/team-1-desktop.jpg 1x,
+                                        ./images/team/team-1-desktop@2x.jpg 2x"
+                                 src="./images/igor-demyanenko.jpg" alt="Игорь Демьяненко"/>                                
                             <h3 class="team__employee-name title">Игорь Демьяненко</h3>
                             <p class="team__employee-description">Product Designer</p>
                             <ul class="team__social-links flex">
@@ -230,7 +225,14 @@
                         </li>
 
                         <li class="team__employee">
-                            <img class="team__photo" src="./images/olga-repina.jpg" alt="Ольга Репина"/>
+                            <img class="team__photo"
+                                 srcset="./images/team/team-2.jpg 1x,
+                                        ./images/team/team-2@2x.jpg 2x,
+                                        ./images/team/team-2-tablet.jpg 1x,
+                                        ./images/team/team-2-tablet@2x.jpg 2x,
+                                        ./images/team/team-2-desktop.jpg 1x,
+                                        ./images/team/team-2-desktop@2x.jpg 2x" 
+                                 src="./images/olga-repina.jpg" alt="Ольга Репина"/>
                             <h3 class="team__employee-name title">Ольга Репина</h3>
                             <p class="team__employee-description">Frontend Developer</p>
                             <ul class="team__social-links flex">
@@ -258,7 +260,14 @@
                         </li>
 
                         <li class="team__employee">
-                            <img class="team__photo" src="./images/nikolay-tarasov.jpg" alt="Николай Тарасов"/>
+                            <img class="team__photo" 
+                                 srcset="./images/team/team-3.jpg 1x,
+                                            ./images/team/team-3@2x.jpg 2x,
+                                            ./images/team/team-3-tablet.jpg 1x,
+                                            ./images/team/team-3-tablet@2x.jpg 2x,
+                                            ./images/team/team-3-desktop.jpg 1x,
+                                            ./images/team/team-3-desktop@2x.jpg 2x" 
+                                 src="./images/nikolay-tarasov.jpg" alt="Николай Тарасов"/>
                             <h3 class="team__employee-name title">Николай Тарасов</h3>
                             <p class="team__employee-description">Marketing</p>
                             <ul class="team__social-links flex">
@@ -286,7 +295,14 @@
                         </li>
 
                         <li class="team__employee">
-                            <img class="team__photo" src="./images/mikhail-ermakov.jpg" alt="Михаил Ермаков"/>
+                            <img class="team__photo" 
+                                 srcset="./images/team/team-4.jpg 1x,
+                                            ./images/team/team-4@2x.jpg 2x,
+                                            ./images/team/team-4-tablet.jpg 1x,
+                                            ./images/team/team-4-tablet@2x.jpg 2x,
+                                            ./images/team/team-4-desktop.jpg 1x,
+                                            ./images/team/team-4-desktop@2x.jpg 2x" 
+                                 src="./images/mikhail-ermakov.jpg" alt="Михаил Ермаков"/>
                             <h3 class="team__employee-name title">Михаил Ермаков</h3>
                             <p class="team__employee-description">UI Designer</p>
                             <ul class="team__social-links flex">
@@ -473,7 +489,6 @@
 
         <script src="./js/mobile-menu.js"></script>
         <script src="./js/modal.js"></script>
-        
         
     </body>
 </html>
