@@ -20,54 +20,16 @@
         <header class="header">
             <div class="container">
                 <div class="header__part flex">
-                    <a href="/" class="logo">Web<span class="header__logo">Studio</span></a>                                                             
-                            
-                    <button class="header__button" type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-                        <svg class="header__burger" width="24" height="16">
-                            <use href="./images/icons.svg#icon-burger">
-                        </svg>
-                    </button>
-
-                    <div class="mobile-menu" id="menu-container" data-menu>
-                        <button class="mobile-menu__close">
-                            <svg class="mobile-menu__icon" width="19" height="19">
-                                <use href="./images/icons.svg#icon-vector"></use>
+                    <div class="header__mobile-menu">
+                        <a href="/" class="logo">Web<span class="header__logo">Studio</span></a>                                                             
+                                
+                        <button class="header__button js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+                            <svg class="header__burger" width="24" height="16">
+                                <use href="./images/icons.svg#icon-burger"></use>
                             </svg>
                         </button>
-                    
-                        <div class="navigation">
-                            <ul class="nav__list flex">
-                                <li class="nav__box"><a href="" class="nav__link nav__link--current">Студия</a></li>
-                                <li><a href="./portfolio.html" class="nav__link">Портфолио</a></li>
-                                <li><a href="" class="nav__link">Контакты</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="contacts">
-                            <ul class="header__kontakt">
-                                <li>
-                                    <a href="mailto:info@devstudio.com" class="header__link"><svg class="header__icon-envelope">
-                                            <use href="./images/icons.svg#icon-envelope"></use>
-                                        </svg>info@devstudio.com</a>
-                                </li>
-                                <li>
-                                    <a href="tel:+380961111111" class="header__link"><svg class="header__icon-smartphone">
-                                            <use href="./images/icons.svg#icon-smartphone">
-                                            </use>
-                                        </svg>+38 096 111 11 11</a>
-                                </li>
-                        </div>
-                        
-                        <div class="header-social">
-                            <ul>
-                                <li>Instagram</li>
-                                <li>Twitter</li>
-                                <li>Facebook</li>
-                                <li>LinkedIn</li>
-                            </ul>
-                        </div>                    
                     </div>
-                    
+                                    
                     <nav class="nav">
                         <ul class="nav__list flex">
                             <li class="nav__box"><a href="" class="nav__link nav__link--current">Студия</a></li>
@@ -96,6 +58,45 @@
         
         <!--Основная часть-->
         <main class="main">
+
+            <!--Мобильное меню-->
+            <div class="menu-container js-menu-container" id="mobile-menu">
+                <button class="mobile-menu__close js-close-menu">
+                    <svg class="mobile-menu__icon" width="18.7" height="18.7">
+                        <use href="./images/icons.svg#icon-vector"></use>
+                    </svg>
+                </button>
+
+                <nav class="mobile-menu__nav">
+                    <ul class="nav__list">
+                        <li class="nav__box"><a href="" class="nav__link nav__link--current">Студия</a></li>
+                        <li><a href="./portfolio.html" class="nav__link">Портфолио</a></li>
+                        <li><a href="" class="nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+                    
+                <div class="mobile-menu__bottom">
+                    <ul class="mobile-menu__kontakt">
+                        <li>
+                            <a href="tel:+380961111111" class="mobile-menu__tel">+38 096 111 11 11</a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@devstudio.com" class="mobile-menu__mail">info@devstudio.com</a>
+                        </li>
+                        
+                    </ul>
+                            
+                
+                    <div class="mobile-menu__social">
+                        <ul class="flex">
+                            <li>Instagram<span class="mobile-menu__devider">|</span></li>
+                            <li>Twitter<span class="mobile-menu__devider">|</span></li>
+                            <li>Facebook<span class="mobile-menu__devider">|</span></li>
+                            <li>LinkedIn</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
             <!-- Герой -->
             <section class="hero">
@@ -169,8 +170,7 @@
 
                                     <img srcset="
                                           ./images/products/occ-1-desktop.jpg 1x,
-                                          ./images/products/occ-1-desktop@2x.jpg 2x
-                                        " type="image/jpg" 
+                                          ./images/products/occ-1-desktop@2x.jpg 2x" 
                                           src="./images/programming.jpg" alt="Десктопные приложения" width="370" height="294"/>
                                 </picture>
                                 <p class="products__name">Десктопные приложения</p>
@@ -186,8 +186,7 @@
 
                                     <img srcset="
                                           ./images/products/occ-2-desktop.jpg 1x,
-                                          ./images/products/occ-2-desktop@2x.jpg 2x
-                                        " type="image/jpg" 
+                                          ./images/products/occ-2-desktop@2x.jpg 2x"  
                                           src="./images/mobile-application-development.jpg" alt="Мобильные приложения" width="370" height="294"/>
                                 </picture>
                                 <p class="products__name">Мобильные приложения</p>
@@ -203,8 +202,7 @@
 
                                     <img srcset="
                                           ./images/products/occ-3-desktop.jpg 1x,
-                                          ./images/products/occ-3-desktop@2x.jpg 2x
-                                        " type="image/jpg" 
+                                          ./images/products/occ-3-desktop@2x.jpg 2x" 
                                           src="./images/color-matching.jpg" alt="Дизайнерские решения" width="370" height="294"/>
                                 </picture>                                
                                 <p class="products__name">Дизайнерские решения</p>

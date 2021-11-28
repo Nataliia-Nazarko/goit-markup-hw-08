@@ -62,9 +62,14 @@
 
 /* Header kontakt */
 .header__box {
+  display: none;
   position: relative;
   height: 38px;
   width: 100%;
+
+  @media screen and (min-width: $tablet) {
+    display: inline-block;
+  }
 }
 
 .header__kontakt {

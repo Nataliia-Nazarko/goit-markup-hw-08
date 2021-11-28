@@ -174,12 +174,11 @@
 }
 
 .footer-form {
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
   @media screen and (min-width: $desktop) {
     display: flex;
     flex-direction: row;
