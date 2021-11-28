@@ -1030,7 +1030,7 @@ img {
   color: #ffffff;
 }
 
-.portfolio__example .overlay:hover .overlay {
+.portfolio__example:hover .overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
