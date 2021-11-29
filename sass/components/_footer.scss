@@ -200,7 +200,7 @@
 }
 
 .footer-forms .form-field {
-  width: 450px;
+  width: 90vw;
   height: 50px;
   margin-bottom: 20px;
 
@@ -218,6 +218,10 @@
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
 
   @media screen and (min-width: $tablet) {
     margin-right: 25px;
